@@ -41,7 +41,8 @@
     a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
     .page {
-      max-width: 1000px;
+      width: 100%;
+      max-width: 1350px;
       margin: 0 auto;
       padding: 64px 24px;
       display: grid;
@@ -138,7 +139,46 @@
     grid-template-columns: 1fr;
   }
 }
-    
+
+    .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.project-card p {
+  max-width: none;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.project-card a {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -202,7 +242,7 @@
         <h2>Research Experience</h2>
         <div class="entry">
           <div class="when">AIMS South Africa Research Phase</div>
-          <p>Quasi-Monte Carlo Methods for Kernel Quantile Embeddings</p>
+          <p> <a href="https://github.com/AndrianinaBA/AIMS-project-Quasi-Monte-Carlo-KQE">Quasi-Monte Carlo Methods for Kernel Quantile Embeddings</a></p>
           <p>Supervisor: <a href="https://www.krikamol.org/">Krikamol Muandet</a></p>
           <ul class="description">
             <li>Addressed the computational limitations of kernel-based hypothesis testing by integrating Quasi-Monte Carlo (QMC) sam-
@@ -234,6 +274,37 @@ maintaining controlled Type I error rates.</li>
           </div>
           
         </div>
+      </section>
+      <section id="projects">
+          <h2>Selected Projects</h2>
+        
+          <div class="project-grid">
+        
+            <article class="project-card">
+              <h3>Build a recommander system</h3>
+              <p class="project-tech">Python - Machine Learning - Recommender System</p>
+              <p>
+                As part of the AIMS AI for Science Curriculum, during the course of Machine Learning at Scale, I built a recommander system using Alternating-Least Squares.
+              </p>
+              <a href="https://github.com/AndrianinaBA/ml_at_scale"
+                 target="_blank" rel="noopener">
+                View source code on GitHub →
+              </a>
+            </article>
+        
+            <article class="project-card">
+              <h3>SEMEVAL Task 9</h3>
+              <p class="project-tech">Python - NLP</p>
+              <p>
+                As part of the AIMS AI for SCience Curriculum, during the Natural Language Processing and LLM Course, I built a Polarization detection for the subtasks of the SemEVAL Competition.
+              </p>
+              <a href="https://github.com/AndrianinaBA/SemEVAL-subtask-9-Polarization-detection"
+                 target="_blank" rel="noopener">
+                View source code on GitHub →
+              </a>
+            </article>
+        
+          </div>
       </section>
     
     </main>
