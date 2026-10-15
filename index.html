@@ -88,7 +88,12 @@
       aside { position: static; }
       .entry { grid-template-columns: 1fr; gap: 2px; }
     }
+
     .research-figures {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
@@ -101,13 +106,16 @@
 }
 
 .research-figures img {
+  display: block;
   width: 100%;
-  height: 200px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
+
   background: var(--bg);
   border: 1px solid var(--rule);
   border-radius: 6px;
-  display: block;
 }
 
 .research-figures figcaption {
@@ -118,14 +126,16 @@
   text-align: center;
 }
 
-@media (max-width: 760px) {
+/* Adapt the number of columns to the available width */
+@media (max-width: 900px) {
+  .research-figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
   .research-figures {
     grid-template-columns: 1fr;
-  }
-
-  .research-figures img {
-    height: auto;
-    max-height: 320px;
   }
 }
     
