@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrianina | Academic profile</title>
+  <meta name="description" content="Academic profile, research interests, publications and CV.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F6F8FA;
+      --ink: #1B2430;
+      --muted: #5B6673;
+      --rule: #D5DBE1;
+      --accent: #0F5C63;
+      --accent-ink: #FFFFFF;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12181F;
+        --ink: #E6EAEE;
+        --muted: #9AA5B1;
+        --rule: #2A343F;
+        --accent: #5CC0C8;
+        --accent-ink: #0B1216;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 72px;
+    }
+    aside { position: sticky; top: 64px; align-self: start; }
+    h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 8px; font-weight: 600; }
+    .role { margin: 0 0 24px; color: var(--muted); }
+    .photo {
+      width: 140px; height: 140px; border-radius: 50%;
+      object-fit: cover; background: var(--rule);
+      display: block; margin-bottom: 24px;
+    }
+    .cv-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-ink);
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .cv-button:hover { opacity: .9; }
+    .contact { list-style: none; padding: 0; margin: 0; font-size: 16px; }
+    .contact li { margin-bottom: 6px; }
+
+    section { margin-bottom: 56px; }
+    h2 {
+      font-size: 1.35rem; font-weight: 600; margin: 0 0 16px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 16px; max-width: 68ch; }
+    .entry { display: grid; grid-template-columns: 110px 1fr; gap: 16px; margin-bottom: 16px; }
+    .entry .when { color: var(--muted); font-size: 16px; }
+    .entry p { margin: 0; }
+    .pubs { list-style: none; padding: 0; margin: 0; }
+    .pubs li { margin-bottom: 16px; max-width: 68ch; }
+    .pubs em { font-style: italic; }
+
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; gap: 40px; padding: 40px 20px; }
+      aside { position: static; }
+      .entry { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <aside>
+      <!-- Replace photo.jpg with your own photo, or delete the next line -->
+      <img class="photo" src="photo.jpg" alt="Portrait of Andrianina" onerror="this.style.display='none'">
+      <h1>Mialimanana Andrianina Bien-Aimé Razafindrakoto</h1>
+      <p class="role">Mathematics and Machine Learning/Deep Learning</p>
+
+      <a class="cv-button" href="cv.pdf" target="_blank" rel="noopener">Download my CV (PDF)</a>
+
+      <ul class="contact">
+        <li><a href="mailto:andrianinaba@gmail.com">andrianinaba@gmail.com</a></li>
+        <li><a href="mailto:andrianinaba@aims.ac.za">andrianinaba@aims.ac.za</a></li>
+      <!--    <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a></li>
+        <li><a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a></li>-->
+        <li><a href="https://github.com/andrianinaba" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>I am a Machine Learning and AI Graduate. My work focuses on machine learning and mathematics, with an interest in kernel methods, non-parametric hypothesis testing
+        . I am interested in mathematics and mathematical foundations of AI/ML.</p>
+        <p>My full academic record is available in my <a href="cv.pdf" target="_blank" rel="noopener">CV</a>.</p>
+      </section>
+
+      <section id="research">
+        <h2>Research interests</h2>
+        <p>Topic one, topic two, topic three, topic four.</p>
+      </section>
+      
+      <!--
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul class="pubs">
+          <li>Author, A., <strong>Your Name</strong>, &amp; Author, B. (2025). Title of the article. <em>Journal Name</em>, 12(3), 45–67. <a href="https://doi.org/" target="_blank" rel="noopener">DOI</a></li>
+          <li><strong>Your Name</strong> (2024). Title of the conference paper. <em>Conference Name</em>. <a href="#">PDF</a></li>
+        </ul>
+      </section>
+    -->
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="when">2023 – present</div>
+          <p><strong>PhD in Your Field</strong>, Your University<br>Thesis: working title</p>
+        </div>
+        <div class="entry">
+          <div class="when">2021 – 2023</div>
+          <p><strong>Master's in Your Field</strong>, Your University</p>
+        </div>
+      </section>
+
+      <!--
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <div class="entry">
+          <div class="when">2024</div>
+          <p>Course name, role (teaching assistant, lecturer), institution</p>
+        </div>
+      </section>
+    -->
+    </main>
+
+  </div>
+</body>
+</html>
