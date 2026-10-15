@@ -88,6 +88,47 @@
       aside { position: static; }
       .entry { grid-template-columns: 1fr; gap: 2px; }
     }
+    .research-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.research-figures figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.research-figures img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  display: block;
+}
+
+.research-figures figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .research-figures {
+    grid-template-columns: 1fr;
+  }
+
+  .research-figures img {
+    height: auto;
+    max-height: 320px;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -161,6 +202,27 @@ Discrepancy (MMD) and Kernel Quantile Embedding (KQE).</li>
             <li>Improved statistical testing power by up to 20% over baseline methods, depending on datasets and sample-size, while
 maintaining controlled Type I error rates.</li>
           </ul>
+
+          <div class="research-figures">
+            <figure>
+              <img src="Selected%20results/cifar_halton0_page.jpg"
+                   alt="CIFAR using Halton Sequences">
+              <figcaption>CIFAR datasets using Halton Sequences</figcaption>
+            </figure>
+
+            <figure>
+              <img src="Selected%20results/lvg_page.jpg"
+                   alt="Laplace VS Gaussian">
+              <figcaption>Laplace  vs Gaussian</figcaption>
+            </figure>
+
+            <figure>
+              <img src="Selected%20results/mnist_sobol_page.jpg"
+                   alt="MNIST with Sobol'">
+              <figcaption>MNIST datasets using Sobol' Sequences</figcaption>
+            </figure>
+          </div>
+          
         </div>
       </section>
     
